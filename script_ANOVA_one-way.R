@@ -43,3 +43,16 @@ summary(PlantGrowth)
 
 # Visualizar estrutura
 glimpse(PlantGrowth)
+
+## Visualização inicial
+
+ggplot(PlantGrowth, aes(x = group, 
+                        y = weight, 
+                        fill = group)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("lightgreen", 
+                               "salmon", 
+                               "lightblue")) +
+  labs(x = "Grupo de Tratamento",
+       y = "Peso (g)",
+       title = "Peso das Plantas por Grupo")
