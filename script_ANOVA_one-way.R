@@ -25,3 +25,21 @@
 ## 1 - Normalidade dos resíduos.
 ## 2 - Homogeneidade de variâncias (homocedasticidade).
 ## 3 - Independência das observações.
+
+# Exemplo prático com o dataset PlantGrowth ------------------------------------------------------------------------------------------------
+
+## Carregar pacotes
+
+library(tidyverse) # Manipulação e visualização de dados
+
+## Carregando e explorando os dados:
+
+# Carregar dados
+data(PlantGrowth)
+head(PlantGrowth)
+
+# Resumo estatístico
+summary(PlantGrowth)
+
+# Visualizar estrutura
+glimpse(PlantGrowth)
