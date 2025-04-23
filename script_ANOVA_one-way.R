@@ -62,7 +62,8 @@ ggplot(PlantGrowth, aes(x = group,
   scale_x_discrete(labels = c("Controle", "Tratamento 1", "Tratamento 2")) +
   labs(x = "Grupo de Tratamento",
        y = "Peso (g)",
-       title = "Peso das Plantas por Grupo")
+       title = "Peso das Plantas por Grupo") +
+  theme_minimal()
 
 # Verificando pressupostos -----------------------------------------------------------------------------------------------------------------
 
@@ -86,3 +87,20 @@ summary(modelo_anova)
 TukeyHSD(modelo_anova)
 # Ou usando o pacote 'emmeans'
 emmeans::emmeans(modelo_anova, pairwise ~ group)
+
+# Interpretação resultados -----------------------------------------------------------------------------------------------------------------
+
+## Se o p-valor da ANOVA for < 0.05, rejeitamos H0.
+## O teste post-hoc identifica quais grupos diferem entre si.
+
+# Conclusão --------------------------------------------------------------------------------------------------------------------------------
+
+## A ANOVA one-way é uma ferramenta poderosa para comparar 
+## médias entre grupos. Neste exemplo, vimos como aplicá-la 
+## no R, verificar seus pressupostos e interpretar os 
+## resultados. Lembre-se de que os pressupostos devem ser 
+## atendidos para que a análise seja válida!
+
+## Dica: Para dados não paramétricos, considere o teste de 
+## Kruskal-Wallis (kruskal.test()).
+
