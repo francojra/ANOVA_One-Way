@@ -35,13 +35,16 @@ library(tidyverse) # Manipulação e visualização de dados
 ## Carregando e explorando os dados:
 
 # Carregar dados
+
 data(PlantGrowth)
 head(PlantGrowth)
 
 # Resumo estatístico
+
 summary(PlantGrowth)
 
 # Visualizar estrutura
+
 glimpse(PlantGrowth)
 
 ## Visualização inicial
@@ -52,7 +55,10 @@ ggplot(PlantGrowth, aes(x = group,
   geom_boxplot() +
   scale_fill_manual(values = c("lightgreen", 
                                "salmon", 
-                               "lightblue")) +
+                               "lightblue"),
+                    name = "Grupos",
+                    breaks = c("ctrl", "trt1", "trt2"),
+                    labels = c("fvewq", "ewfq", "rg")) +
   labs(x = "Grupo de Tratamento",
        y = "Peso (g)",
        title = "Peso das Plantas por Grupo")
