@@ -58,7 +58,8 @@ ggplot(PlantGrowth, aes(x = group,
                                "lightblue"),
                     name = "Grupos",
                     breaks = c("ctrl", "trt1", "trt2"),
-                    labels = c("fvewq", "ewfq", "rg")) +
+                    labels = c("Controle", "Tratamento 1", "Tratamento 2")) +
+  scale_x_discrete(labels = c("Controle", "Tratamento 1", "Tratamento 2")) +
   labs(x = "Grupo de Tratamento",
        y = "Peso (g)",
        title = "Peso das Plantas por Grupo")
