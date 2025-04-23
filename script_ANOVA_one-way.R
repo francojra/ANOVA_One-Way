@@ -63,3 +63,26 @@ ggplot(PlantGrowth, aes(x = group,
   labs(x = "Grupo de Tratamento",
        y = "Peso (g)",
        title = "Peso das Plantas por Grupo")
+
+# Verificando pressupostos -----------------------------------------------------------------------------------------------------------------
+
+## 1. Normalidade (teste de Shapiro-Wilk por grupo):
+
+tapply(PlantGrowth$weight, PlantGrowth$group, shapiro.test)
+
+## 2. Homogeneidade de Variâncias (teste de Levene ou Bartlett):
+
+car::leveneTest(weight ~ group, data = PlantGrowth)
+# Ou
+bartlett.test(weight ~ group, data = PlantGrowth)
+
+# Realizando a ANOVA -----------------------------------------------------------------------------------------------------------------------
+
+modelo_anova <- aov(weight ~ group, data = PlantGrowth)
+summary(modelo_anova)
+
+## Teste Post-Hoc (se a ANOVA for significativa)
+
+TukeyHSD(modelo_anova)
+# Ou usando o pacote 'emmeans'
+emmeans::emmeans(modelo_anova, pairwise ~ group)
