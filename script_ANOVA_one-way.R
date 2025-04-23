@@ -5,6 +5,8 @@
 
 # Introdução -------------------------------------------------------------------------------------------------------------------------------
 
+# O que fazemos para ver diferenças entre três ou mais grupos?: ----------------------------------------------------------------------------
+
 ## O que é ANOVA One-Way?
 
 ## A ANOVA (Análise de Variância) de uma via é um teste estatístico 
@@ -17,3 +19,9 @@
 
 ## H0: as médias de todos os grupos são iguais;
 ## H1: pelo menos uma média é diferente.
+
+## Pressupostos:
+
+## 1 - Normalidade dos resíduos.
+## 2 - Homogeneidade de variâncias (homocedasticidade).
+## 3 - Independência das observações.
