@@ -20,3 +20,7 @@
 3. Verificando pressupostos
 - Normalidade (teste de Shapiro-Wilk por grupo)
 - Homogeneidade de Variâncias (teste de Levene ou Bartlett)
+4. Realizando a ANOVA
+- Teste Post-Hoc (se a ANOVA for significativa)
+5. Interpretação dos resultados
+6. Conclusão
