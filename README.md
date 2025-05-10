@@ -11,3 +11,9 @@
 - O que é a ANOVA One-Way?
 - Hipóteses
 - Pressupostos
+2. Exemplo prático com o dataset PlantGrowth 
+- Carregar pacotes
+- Carregar dados
+- Resumo estatístico
+- Visualizar estrutura dos dados
+- Visualização inicial do gráfico
