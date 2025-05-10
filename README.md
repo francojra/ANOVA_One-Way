@@ -17,3 +17,6 @@
 - Resumo estatístico
 - Visualizar estrutura dos dados
 - Visualização inicial do gráfico
+3. Verificando pressupostos
+- Normalidade (teste de Shapiro-Wilk por grupo)
+- Homogeneidade de Variâncias (teste de Levene ou Bartlett)
